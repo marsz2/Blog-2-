@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sumanvi Blog</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            Sumanvi
+        </a>
+
+        <a href="#admin" class="admin-link">
+            Admin
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- BLOG LIST -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Our Blog</h1>
+
+            <p>
+                Electrical, business and industry insights.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="container">
+
+        <div id="blogList" class="blog-grid">
+
+            <p>Loading blogs...</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMIN LOGIN -->
+
+    <section id="admin" class="admin-section">
+
+        <div class="admin-box">
+
+            <h2>Admin Login</h2>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Admin Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+
+        <!-- ADMIN DASHBOARD -->
+
+        <div
+            id="dashboard"
+            class="dashboard"
+            style="display:none;"
+        >
+
+            <div class="dashboard-header">
+
+                <h2>Blog Dashboard</h2>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+
+            <div class="blog-form">
+
+                <h3 id="formTitle">
+                    Add New Blog
+                </h3>
+
+
+                <input
+                    type="hidden"
+                    id="blogId"
+                >
+
+
+                <label>
+                    Blog Title
+                </label>
+
+                <input
+                    type="text"
+                    id="blogTitle"
+                    placeholder="Enter blog title"
+                >
+
+
+                <label>
+                    Slug
+                </label>
+
+                <input
+                    type="text"
+                    id="blogSlug"
+                    placeholder="example-blog-title"
+                >
+
+
+                <label>
+                    Short Description
+                </label>
+
+                <textarea
+                    id="blogExcerpt"
+                    placeholder="Short description..."
+                ></textarea>
+
+
+                <label>
+                    Blog Content
+                </label>
+
+                <textarea
+                    id="blogContent"
+                    class="content-input"
+                    placeholder="Write your blog content here..."
+                ></textarea>
+
+
+                <label>
+                    Blog Image
+                </label>
+
+                <input
+                    type="file"
+                    id="blogImage"
+                    accept="image/*"
+                >
+
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="blogPublished"
+                    >
+
+                    Publish Blog
+
+                </label>
+
+
+                <button
+                    id="saveBlogBtn"
+                    type="button"
+                >
+                    Save Blog
+                </button>
+
+
+                <button
+                    id="cancelEditBtn"
+                    type="button"
+                    class="secondary"
+                    style="display:none;"
+                >
+                    Cancel Edit
+                </button>
+
+
+                <p id="adminMessage"></p>
+
+            </div>
+
+
+            <h3>All Blogs</h3>
+
+            <div id="adminBlogList"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Sumanvi. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
